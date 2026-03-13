@@ -1,0 +1,42 @@
+<!--
+  Hero Section Component
+  
+  Props:
+  - bgColor: Color de fondo (default: "bg-blue-600")
+  - bgImage: URL de imagen de fondo (opcional)
+  - title: Título principal
+  - subtitle: Texto descriptivo (opcional)
+  - ctaText: Texto del botón CTA
+  - ctaUrl: URL del botón CTA
+  - ctaColor: Color del botón (default: "bg-green-500 hover:bg-green-600")
+  - textColor: Color del texto (default: "text-white")
+  - padding: Padding personalizado (default: "py-12 px-9 sm:p-6")
+-->
+
+<table class="w-full">
+  <if condition="props.bgImage">
+    <tr>
+      <td class="p-0">
+        <img src="{{ props.bgImage }}" alt="{{ props.title }}" class="w-full">
+      </td>
+    </tr>
+  </if>
+  <tr>
+    <td class="{{ props.padding || 'py-12 px-9 sm:p-6' }} {{ props.bgColor || 'bg-blue-600' }} {{ props.textColor || 'text-white' }} text-center">
+      <h1 class="m-0 mb-4 text-4xl sm:text-3xl font-bold {{ props.textColor || 'text-white' }}">
+        {{ props.title }}
+      </h1>
+      <if condition="props.subtitle">
+        <p class="m-0 mb-6 text-xl sm:text-lg {{ props.textColor || 'text-white' }}">
+          {{ props.subtitle }}
+        </p>
+      </if>
+      <x-button
+        href="{{ props.ctaUrl }}"
+        class="{{ props.ctaColor || 'bg-green-500 hover:bg-green-600' }} text-white"
+      >
+        {{ props.ctaText }}
+      </x-button>
+    </td>
+  </tr>
+</table>

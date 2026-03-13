@@ -1,0 +1,59 @@
+<!--
+  CTA Section Component
+  
+  Props:
+  - title: Título principal
+  - subtitle: Texto descriptivo (opcional)
+  - ctaText: Texto del botón CTA
+  - ctaUrl: URL del botón CTA
+  - ctaColor: Color del botón (default: "bg-green-600 hover:bg-green-700")
+  - bgColor: Color de fondo (default: "bg-gray-800")
+  - textColor: Color del texto (default: "text-white")
+  - secondaryText: Texto secundario debajo del botón (opcional)
+  - secondaryLink: Link secundario (opcional)
+  
+  Ejemplo de uso:
+  <x-cta-section 
+    title="Optimice los costos de su operación"
+    subtitle="Solicite una cotización personalizada para su negocio"
+    ctaText="Solicitar Cotización"
+    ctaUrl="https://comcer.cl/contacto"
+  />
+-->
+
+<table class="w-full">
+  <tr>
+    <td class="py-8 px-9 sm:p-6 {{ props.bgColor || 'bg-gray-800' }} {{ props.textColor || 'text-white' }} text-center">
+      <h2 class="m-0 mb-4 text-2xl sm:text-xl font-bold {{ props.textColor || 'text-white' }}">
+        {{ props.title }}
+      </h2>
+      <if condition="props.subtitle">
+        <p class="m-0 mb-6 text-base/6 {{ props.textColor || 'text-white' }}">
+          {{ props.subtitle }}
+        </p>
+      </if>
+      <table class="w-full">
+        <tr>
+          <td class="text-center">
+            <x-button
+              href="{{ props.ctaUrl }}"
+              class="{{ props.ctaColor || 'bg-green-600 hover:bg-green-700' }} text-white mb-4"
+            >
+              {{ props.ctaText }}
+            </x-button>
+            <if condition="props.secondaryText">
+              <p class="m-0 text-sm {{ props.textColor || 'text-white' }}">
+                {{ props.secondaryText }}
+                <if condition="props.secondaryLink">
+                  <a href="{{ props.secondaryLink.url }}" class="{{ props.textColor || 'text-white' }} underline">
+                    {{ props.secondaryLink.text }}
+                  </a>
+                </if>
+              </p>
+            </if>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,192 @@
+---
+bodyClass: bg-gray-50
+preheader: Complete su compra en COMCER - Productos guardados en su carrito
+---
+
+<x-main>
+  <div class="bg-gray-50 sm:px-4 font-sans">
+    <!-- Contenedor exterior para centrar todo el correo -->
+    <table border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full">
+      <tbody>
+        <tr>
+          <td align="center">
+            <!-- Contenedor principal que envuelve todo el contenido -->
+            <table border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full">
+              <tbody>
+                <tr>
+                  <td style="background-color: #f7f7f7; padding: 40px 10px;" align="center" class="bg-gray-50 py-10 px-4 sm:px-2">
+                    <!-- Frame interior que contiene el correo -->
+                    <table style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);" border="0" width="600" cellspacing="0" cellpadding="0" class="w-full max-w-[600px] bg-white rounded-lg shadow-lg">
+                      <tbody>
+                        <tr>
+                          <td style="padding: 35px 30px;" align="center" valign="top" class="py-8 px-8 sm:px-6">
+                            
+                            <!-- Encabezado con logo -->
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full">
+                              <tbody>
+                                <tr>
+                                  <td style="padding-bottom: 25px; border-bottom: 1px solid #e0e0e0;" align="center" class="pb-6 border-b border-gray-300 text-center">
+                                    <img style="display: block; margin: 0 auto;" src="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto,w_200/v1752948997/email-marketing/comcer/logo.png" alt="COMCER" width="140" class="mx-auto" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <!-- Contenido principal -->
+                            <table style="font-family: Arial, Helvetica, sans-serif; color: #444444; line-height: 1.7;" border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full font-sans text-gray-700">
+                              <tbody>
+                                <tr>
+                                  <td style="padding-top: 30px;" class="pt-8">
+                                    <h2 style="color: #02b9d2; margin-top: 0; font-size: 22px; margin-bottom: 15px;" class="text-xl sm:text-lg font-semibold text-cyan-500 m-0 mb-4">
+                                      ¡Hola {{customer.firstname}}!
+                                    </h2>
+                                    <p style="margin: 0 0 15px 0; font-size: 16px;" class="m-0 mb-4 text-base sm:text-sm">
+                                      Soy <strong style="color: #02b9d2;">Giselle</strong> de <span style="color: #02b9d2; font-weight: bold;" class="text-cyan-500 font-bold">COMCER</span>. He notado que inició una compra en nuestra tienda pero no llegó a completarla.
+                                    </p>
+                                    <p style="margin: 0 0 20px 0;" class="m-0 mb-4 text-base sm:text-sm">
+                                      Su carrito sigue guardado con todos los productos que seleccionó. ¿Le gustaría finalizar su pedido?
+                                    </p>
+                                    
+                                    <!-- Mensaje personal de Giselle -->
+                                    <div style="background-color: #f0f9ff; border-left: 4px solid #02b9d2; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0;" class="bg-blue-50 border-l-4 border-cyan-500 p-5 my-5 rounded-r-lg">
+                                      <p style="margin: 0; font-style: italic; color: #1e40af;" class="m-0 italic text-blue-800">
+                                        "Estoy aquí para ayudarle con cualquier duda sobre su pedido. Si necesita información adicional sobre nuestros productos o tiene alguna consulta, no dude en contactarme directamente."
+                                      </p>
+                                      <p style="margin: 10px 0 0 0; font-weight: bold; color: #02b9d2;" class="mt-2 font-bold text-cyan-500 m-0">
+                                        - Giselle, Ejecutiva Comercial
+                                      </p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <!-- Botón -->
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full">
+                              <tbody>
+                                <tr>
+                                  <td style="padding: 25px 0 30px 0;" align="center" class="py-6 text-center">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td style="border-radius: 6px;" align="center" bgcolor="#99CA3C" class="rounded-md bg-green-500">
+                                            <a style="border: 1px solid #99CA3C; border-radius: 6px; color: #ffffff; display: inline-block; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.2; padding: 14px 30px; text-decoration: none; white-space: nowrap;" 
+                                               href="#" 
+                                               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md no-underline border border-green-500">
+                                              Completar mi compra
+                                            </a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <!-- Mensaje adicional -->
+                            <table style="font-family: Arial, Helvetica, sans-serif; color: #444444; line-height: 1.7;" border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full font-sans text-gray-700">
+                              <tbody>
+                                <tr>
+                                  <td class="">
+                                    <!-- Información de contacto destacada -->
+                                    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 25px 0;" class="bg-gray-50 border border-gray-300 rounded-lg p-5 my-6">
+                                      <h3 style="color: #02b9d2; margin: 0 0 15px 0; font-size: 18px; font-weight: bold;" class="text-lg font-bold text-cyan-500 m-0 mb-4">
+                                        💬 Contáctame directamente
+                                      </h3>
+                                      <table class="w-full">
+                                        <tr>
+                                          <td style="padding: 8px 0;">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                              <span style="background-color: #02b9d2; color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">📧</span>
+                                              <div>
+                                                <strong style="color: #374151;">Email:</strong> 
+                                                <a href="mailto:giselle@comcer.cl" style="color: #02b9d2; text-decoration: none; font-weight: 500;">giselle@comcer.cl</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="padding: 8px 0;">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                              <span style="background-color: #02b9d2; color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">📞</span>
+                                              <div>
+                                                <strong style="color: #374151;">Teléfono:</strong> 
+                                                <a href="tel:+56226832575" style="color: #02b9d2; text-decoration: none; font-weight: 500;">+56 2 2683 2575</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="padding: 8px 0;">
+                                            <div style="display: flex; align-items: center;">
+                                              <span style="background-color: #25D366; color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 14px;">💬</span>
+                                              <div>
+                                                <strong style="color: #374151;">WhatsApp:</strong> 
+                                                <a href="https://wa.me/56966767958?text=Hola%20Giselle,%20necesito%20ayuda%20con%20mi%20carrito%20de%20compras" style="color: #25D366; text-decoration: none; font-weight: 500;">+56 9 6676 7958</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      
+                                      <p style="margin: 15px 0 0 0; font-size: 14px; color: #6b7280; font-style: italic;" class="mt-4 text-sm text-gray-500 italic m-0">
+                                        Respondo rápidamente por WhatsApp para resolver sus dudas al instante.
+                                      </p>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <!-- Separador gris claro -->
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full">
+                              <tbody>
+                                <tr>
+                                  <td style="height: 1px; background-color: #e8e8e8; font-size: 0; line-height: 0;" class="h-px bg-gray-300"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <!-- Pie de página -->
+                            <table style="font-family: Arial, Helvetica, sans-serif; color: #888888; line-height: 1.5; font-size: 13px;" border="0" width="100%" cellspacing="0" cellpadding="0" class="w-full font-sans text-gray-500 text-sm">
+                              <tbody>
+                                <tr>
+                                  <td style="padding-top: 25px;" class="pt-6">
+                                    <p style="margin: 0 0 10px 0;" class="m-0 mb-2">
+                                      Saludos cordiales,<br>
+                                      <strong style="color: #02b9d2;">Giselle</strong><br>
+                                      <span style="font-size: 12px; color: #666;">Ejecutiva Comercial - COMCER</span>
+                                    </p>
+                                    <p style="margin: 0;" class="m-0">{{cart.unsubscribe}}</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                    <!-- Información de copyright -->
+                    <table style="max-width: 600px; margin-top: 20px;" border="0" width="600" cellspacing="0" cellpadding="0" class="w-full max-w-[600px] mt-5">
+                      <tbody>
+                        <tr>
+                          <td style="font-family: Arial, Helvetica, sans-serif; color: #999999; font-size: 12px;" align="center" class="font-sans text-gray-400 text-xs text-center">
+                            © {{ new Date().getFullYear() }} COMCER. Todos los derechos reservados.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</x-main>

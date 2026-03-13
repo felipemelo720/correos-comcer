@@ -1,0 +1,108 @@
+<!--
+  Contact Info Component
+  
+  Props:
+  - variant: "default" | "cards" | "personal" (default: "default")
+  - showTitle: Mostrar título (default: true)
+  - email: Email de contacto (default: "pedidos@comcer.cl")
+  - phone: Teléfono (default: "+56 2 2683 2575")
+  - whatsapp: WhatsApp (default: "+56 9 6676 7958")
+  - address: Dirección (opcional)
+  - personalName: Nombre del contacto personal (para variant="personal")
+  - personalRole: Cargo del contacto personal
+-->
+
+<if condition="props.variant === 'cards'">
+  <!-- Variante de tarjetas -->
+  <table class="w-full mb-8">
+    <tr>
+      <td class="p-2 sm:w-full sm:block w-1/3 align-top">
+        <div class="bg-gray-50 rounded-lg p-6 sm:p-4 text-center h-full">
+          <div class="text-2xl mb-2">📧</div>
+          <h4 class="m-0 mb-2 text-base font-semibold">Email</h4>
+          <p class="m-0 text-sm">
+            <a href="mailto:{{ props.email || 'pedidos@comcer.cl' }}" class="text-blue-600 no-underline">
+              {{ props.email || 'pedidos@comcer.cl' }}
+            </a>
+          </p>
+        </div>
+      </td>
+      <td class="p-2 sm:w-full sm:block w-1/3 align-top">
+        <div class="bg-gray-50 rounded-lg p-6 sm:p-4 text-center h-full">
+          <div class="text-2xl mb-2">📞</div>
+          <h4 class="m-0 mb-2 text-base font-semibold">Teléfono</h4>
+          <p class="m-0 text-sm">
+            <a href="tel:{{ (props.phone || '+56 2 2683 2575').replace(/\s/g, '') }}" class="text-blue-600 no-underline">
+              {{ props.phone || '+56 2 2683 2575' }}
+            </a>
+          </p>
+        </div>
+      </td>
+      <td class="p-2 sm:w-full sm:block w-1/3 align-top">
+        <div class="bg-gray-50 rounded-lg p-6 sm:p-4 text-center h-full">
+          <div class="text-2xl mb-2">💬</div>
+          <h4 class="m-0 mb-2 text-base font-semibold">WhatsApp</h4>
+          <p class="m-0 text-sm">
+            <a href="https://wa.me/{{ (props.whatsapp || '+56 9 6676 7958').replace(/[^0-9]/g, '') }}" class="text-green-600 no-underline">
+              {{ props.whatsapp || '+56 9 6676 7958' }}
+            </a>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  
+<elseif condition="props.variant === 'personal'" />
+  <!-- Variante personal -->
+  <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg p-6 mb-8 text-white text-center">
+    <p class="m-0 mb-4 text-lg font-semibold">¿Necesita ayuda con su pedido?</p>
+    <p class="m-0 mb-2">{{ props.personalName || 'Su ejecutivo de ventas' }}</p>
+    <if condition="props.personalRole">
+      <p class="m-0 mb-4 text-sm">{{ props.personalRole }}</p>
+    </if>
+    <p class="m-0 mb-2">
+      📧 <a href="mailto:{{ props.email || 'pedidos@comcer.cl' }}" class="text-white underline">
+        {{ props.email || 'pedidos@comcer.cl' }}
+      </a>
+    </p>
+    <p class="m-0">
+      📞 <a href="tel:{{ (props.phone || '+56 2 2683 2575').replace(/\s/g, '') }}" class="text-white underline">
+        {{ props.phone || '+56 2 2683 2575' }}
+      </a>
+    </p>
+  </div>
+  
+<else />
+  <!-- Variante default -->
+  <table class="w-full mb-6">
+    <tr>
+      <td class="text-center">
+        <if condition="props.showTitle !== false">
+          <h4 class="m-0 mb-4 text-base font-semibold text-gray-800">
+            {{ props.title || 'Información de Contacto' }}
+          </h4>
+        </if>
+        <p class="m-0 mb-2 text-sm text-gray-600">
+          📧 Email: <a href="mailto:{{ props.email || 'pedidos@comcer.cl' }}" class="text-blue-600 no-underline">
+            {{ props.email || 'pedidos@comcer.cl' }}
+          </a>
+        </p>
+        <p class="m-0 mb-2 text-sm text-gray-600">
+          📞 Mesa Central: <a href="tel:{{ (props.phone || '+56 2 2683 2575').replace(/\s/g, '') }}" class="text-blue-600 no-underline">
+            {{ props.phone || '+56 2 2683 2575' }}
+          </a>
+        </p>
+        <p class="m-0 mb-2 text-sm text-gray-600">
+          💬 WhatsApp: <a href="https://wa.me/{{ (props.whatsapp || '+56 9 6676 7958').replace(/[^0-9]/g, '') }}" class="text-green-600 no-underline">
+            {{ props.whatsapp || '+56 9 6676 7958' }}
+          </a>
+        </p>
+        <if condition="props.address">
+          <p class="m-0 mb-4 text-sm text-gray-600">
+            📍 {{ props.address }}
+          </p>
+        </if>
+      </td>
+    </tr>
+  </table>
+</if>

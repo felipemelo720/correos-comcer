@@ -1,0 +1,94 @@
+---
+bodyClass: bg-gray-50
+preheader: ¿Retomamos tu compra? - Tu carrito te espera en Clandent
+---
+
+<x-main>
+  <div class="bg-gray-50 sm:px-4 font-inter">
+    <table align="center" class="m-0 mx-auto">
+      <tr>
+        <td class="w-[600px] max-w-full">
+          <x-spacer height="24px" />
+
+          <!-- Header -->
+          <table class="w-full">
+            <tr>
+              <td class="py-6 px-9 sm:p-6 bg-white [border:1px_solid_theme(colors.gray.200)] rounded-t-lg text-center">
+                <img src="https://clandent.cl/wp-content/uploads/2024/07/logoclandent2024.jpg.webp" width="180" alt="Clandent" class="mx-auto">
+              </td>
+            </tr>
+          </table>
+
+          <!-- Main Content -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-white [border-left:1px_solid_theme(colors.gray.200)] [border-right:1px_solid_theme(colors.gray.200)]">
+                <p class="m-0 mb-4 text-base text-gray-700">
+                  Hola {{customer.firstname}}
+                </p>
+                
+                <p class="m-0 mb-4 text-base text-gray-700">
+                  Has dejado tu carrito abandonado en la tienda online de {{admin.company}} 😢. ¿Lo retomamos?, puedes hacerlo en cualquier momento, solo haz clic 
+                  <a href="https://www.clandent.cl/checkout-2/" style="color: #03A9AD;" class="underline">aquí</a>.
+                </p>
+
+                <table class="w-full mb-6">
+                  <tr>
+                    <td align="center">
+                      <a href="https://www.clandent.cl/checkout-2/" 
+                         style="background-color: #03A9AD; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 14px; line-height: 1.2; text-align: center;">
+                        Completar Compra
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Cart Products -->
+          <table class="w-full">
+            <tr>
+              <td class="p-6 sm:p-4 bg-gray-50 [border-left:1px_solid_theme(colors.gray.200)] [border-right:1px_solid_theme(colors.gray.200)]">
+                {{cart.product.table}}
+              </td>
+            </tr>
+          </table>
+
+          <!-- Support Message -->
+          <table class="w-full">
+            <tr>
+              <td class="py-6 px-9 sm:p-6 bg-white [border-left:1px_solid_theme(colors.gray.200)] [border-right:1px_solid_theme(colors.gray.200)] [border-bottom:1px_solid_theme(colors.gray.200)] rounded-b-lg">
+                <p class="m-0 mb-4 text-base text-gray-700">
+                  Si necesitas ayuda con tu compra, avísanos.
+                </p>
+                
+                <p class="m-0 mb-2 text-base text-gray-800">
+                  Gracias,
+                </p>
+                
+                <p class="m-0 text-base font-semibold text-gray-800">
+                  Equipo Clandent
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <x-spacer height="24px" />
+          <table class="w-full">
+            <tr>
+              <td class="text-center">
+                <p class="m-0 text-xs text-gray-400">
+                  {{cart.unsubscribe}}
+                </p>
+              </td>
+            </tr>
+          </table>
+          
+          <x-spacer height="24px" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>

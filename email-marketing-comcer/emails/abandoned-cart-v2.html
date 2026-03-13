@@ -1,0 +1,225 @@
+---
+bodyClass: bg-gray-50
+preheader: Complete su compra en COMCER - Su carrito le está esperando
+---
+
+<x-main>
+  <div class="bg-gray-50 sm:px-4 font-inter">
+    <table align="center" class="m-0 mx-auto">
+      <tr>
+        <td class="w-[600px] max-w-full">
+          <x-spacer height="24px" />
+
+          <!-- Header -->
+          <table class="w-full">
+            <tr>
+              <td class="py-6 px-9 sm:p-6 bg-white [border:1px_solid_theme(colors.gray.200)] rounded-t-lg text-center">
+                <img src="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto/v1752948997/email-marketing/comcer/logo.png" width="200" alt="Comcer" class="mx-auto">
+              </td>
+            </tr>
+          </table>
+
+          <!-- Hero Section Personal -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-cyan-500 text-white text-center">
+                <h1 class="m-0 mb-4 text-3xl/10 sm:text-2xl/8 font-bold">
+                  ¡Hola {{customer.firstname}}!
+                </h1>
+                <p class="m-0 mb-6 text-lg/7 sm:text-base/6">
+                  Soy <strong>Giselle</strong> de COMCER y he notado que no completó su compra
+                </p>
+                <div class="bg-white/20 rounded-lg p-4 mb-6">
+                  <p class="m-0 text-white/90 italic">
+                    "Su carrito sigue guardado. Estoy aquí para ayudarle a finalizar su pedido"
+                  </p>
+                </div>
+                <x-button
+                  href="#"
+                  class="bg-green-500 hover:bg-green-600"
+                >
+                  Completar mi Compra
+                </x-button>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Mensaje Personal de Giselle -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-white [border:1px_solid_theme(colors.gray.200)]">
+                <div class="bg-blue-50 rounded-lg p-6 mb-8">
+                  <h3 class="m-0 mb-4 text-xl/7 font-bold text-center text-gray-800">
+                    💬 Mensaje Personal de Giselle
+                  </h3>
+                  
+                  <div class="bg-white rounded-lg p-6 border-l-4 border-cyan-500">
+                    <p class="m-0 mb-4 text-base/6 text-gray-700">
+                      Como distribuidor oficial de productos de calidad, en <strong>COMCER</strong> nos preocupamos por brindarle la mejor experiencia de compra.
+                    </p>
+                    <p class="m-0 mb-4 text-base/6 text-gray-700">
+                      He revisado su carrito y quiero asegurarme de que tenga toda la información que necesita para tomar la mejor decisión para su negocio.
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                      <p class="m-0 text-sm text-gray-600 italic">
+                        "Si tiene dudas sobre especificaciones técnicas, precios mayoristas o necesita una cotización personalizada, contácteme directamente. Respondo rápido por WhatsApp."
+                      </p>
+                      <p class="m-0 mt-3 font-semibold text-cyan-500">
+                        - Giselle, Ejecutiva Comercial
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <h3 class="m-0 mb-6 text-xl/7 font-bold text-center text-gray-800">
+                  📞 Contáctame Directamente
+                </h3>
+                
+                <table class="w-full mb-8">
+                  <tr>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/3 align-top">
+                      <div class="bg-cyan-50 rounded-lg p-6 sm:p-4 text-center h-full">
+                        <div class="bg-cyan-500 text-white w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-xl">
+                          📧
+                        </div>
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-cyan-700">Email</h4>
+                        <p class="m-0 text-sm text-gray-600">
+                          <a href="mailto:giselle@comcer.cl" class="text-cyan-600 no-underline font-medium">
+                            giselle@comcer.cl
+                          </a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/3 align-top">
+                      <div class="bg-blue-50 rounded-lg p-6 sm:p-4 text-center h-full">
+                        <div class="bg-blue-500 text-white w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-xl">
+                          📞
+                        </div>
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-blue-700">Teléfono</h4>
+                        <p class="m-0 text-sm text-gray-600">
+                          <a href="tel:+56226832575" class="text-blue-600 no-underline font-medium">
+                            +56 2 2683 2575
+                          </a>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/3 align-top">
+                      <div class="bg-green-50 rounded-lg p-6 sm:p-4 text-center h-full">
+                        <div class="bg-green-500 text-white w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-xl">
+                          💬
+                        </div>
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-green-700">WhatsApp</h4>
+                        <p class="m-0 text-sm text-gray-600">
+                          <a href="https://wa.me/56966767958?text=Hola%20Giselle,%20necesito%20ayuda%20con%20mi%20carrito%20de%20compras" class="text-green-600 no-underline font-medium">
+                            +56 9 6676 7958
+                          </a>
+                        </p>
+                        <p class="m-0 mt-2 text-xs text-green-600 font-medium">
+                          ⚡ Respuesta rápida
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+                <x-divider />
+
+                <!-- Beneficios de Completar la Compra -->
+                <h3 class="m-0 mb-6 text-xl/7 font-bold text-center text-gray-800">
+                  ✅ Al completar su compra obtiene
+                </h3>
+                
+                <table class="w-full mb-8">
+                  <tr>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                      <div class="bg-blue-50 rounded-lg p-6 sm:p-4 text-center">
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-blue-900">Precios Mayoristas</h4>
+                        <p class="m-0 text-sm sm:text-xs text-gray-700">
+                          Mejores precios para su negocio
+                        </p>
+                      </div>
+                    </td>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                      <div class="bg-blue-50 rounded-lg p-6 sm:p-4 text-center">
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-blue-900">Asesoría Personal</h4>
+                        <p class="m-0 text-sm sm:text-xs text-gray-700">
+                          Giselle le ayuda con su pedido
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                      <div class="bg-blue-50 rounded-lg p-6 sm:p-4 text-center">
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-blue-900">Entrega Rápida</h4>
+                        <p class="m-0 text-sm sm:text-xs text-gray-700">
+                          Productos listos para su operación
+                        </p>
+                      </div>
+                    </td>
+                    <td class="p-4 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                      <div class="bg-blue-50 rounded-lg p-6 sm:p-4 text-center">
+                        <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold text-blue-900">Productos Premium</h4>
+                        <p class="m-0 text-sm sm:text-xs text-gray-700">
+                          Calidad IPEL para su establecimiento
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- CTA Final -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-gray-800 text-white text-center">
+                <h2 class="m-0 mb-4 text-2xl/8 font-bold">
+                  ¿Listo para finalizar su pedido?
+                </h2>
+                <p class="m-0 mb-6 text-base/6">
+                  Su carrito está guardado y listo para completar
+                </p>
+                <x-button
+                  href="#"
+                  class="bg-green-500 hover:bg-green-600"
+                >
+                  Ir a Mi Carrito
+                </x-button>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <table class="w-full">
+            <tr>
+              <td class="py-6 px-9 sm:px-6 bg-white [border:1px_solid_theme(colors.gray.200)] rounded-b-lg">
+                <!-- Links -->
+                <p class="m-0 mb-4 text-center text-sm text-gray-600">
+                  <a href="https://comcer.cl" class="text-blue-600 no-underline">Sitio Web</a> |
+                  <a href="https://comcer.cl/productos" class="text-blue-600 no-underline">Catálogo</a> |
+                  <a href="https://comcer.cl/contacto" class="text-blue-600 no-underline">Contacto</a>
+                </p>
+                <p class="m-0 text-center text-xs text-gray-500 mb-2">
+                  Saludos cordiales,<br>
+                  <strong class="text-cyan-500">Giselle</strong><br>
+                  <span class="text-xs text-gray-400">Ejecutiva Comercial - COMCER</span>
+                </p>
+                <p class="m-0 text-center text-xs text-gray-500">
+                  &copy; {{ new Date().getFullYear() }} Comcer. Todos los derechos reservados.
+                </p>
+                <p class="m-0 mt-4 text-center">
+                  {{cart.unsubscribe}}
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <x-spacer height="24px" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>

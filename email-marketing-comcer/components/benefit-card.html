@@ -1,0 +1,24 @@
+<!--
+  Benefit Card Component
+  
+  Props:
+  - title: Título del beneficio
+  - description: Descripción del beneficio
+  - bgColor: Color de fondo (default: "bg-blue-50")
+  - titleColor: Color del título (default: "text-blue-900")
+  - textColor: Color del texto (default: "text-gray-700")
+  - minHeight: Altura mínima (default: "120px")
+  - icon: Emoji o icono (opcional)
+-->
+
+<div class="{{ props.bgColor || 'bg-blue-50' }} rounded-lg p-6 sm:p-4 m-2" style="min-height: {{ props.minHeight || '120px' }};">
+  <if condition="props.icon">
+    <div class="text-3xl mb-2">{{ props.icon }}</div>
+  </if>
+  <h4 class="m-0 mb-2 text-lg sm:text-base font-semibold {{ props.titleColor || 'text-blue-900' }}">
+    {{ props.title }}
+  </h4>
+  <p class="m-0 text-sm sm:text-xs {{ props.textColor || 'text-gray-700' }}">
+    {{ props.description }}
+  </p>
+</div>

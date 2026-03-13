@@ -1,0 +1,36 @@
+<!--
+  Benefit Grid Component
+  Crea un grid responsivo de 2 columnas para tarjetas de beneficios
+  
+  Props:
+  - benefits: Array de objetos con { title, description, icon?, bgColor?, titleColor?, textColor? }
+  
+  Ejemplo de uso:
+  <x-benefit-grid 
+    :benefits="[
+      { title: 'Beneficio 1', description: 'Descripción 1' },
+      { title: 'Beneficio 2', description: 'Descripción 2', icon: '🚀' }
+    ]"
+  />
+-->
+
+<table class="w-full mb-8">
+  <each loop="benefit, index in props.benefits">
+    <if condition="index % 2 === 0">
+      <tr>
+    </if>
+    <td class="p-2 sm:w-full sm:block w-1/2 align-top">
+      <x-benefit-card 
+        :title="benefit.title"
+        :description="benefit.description"
+        :icon="benefit.icon"
+        :bgColor="benefit.bgColor"
+        :titleColor="benefit.titleColor"
+        :textColor="benefit.textColor"
+      />
+    </td>
+    <if condition="index % 2 === 1 || index === props.benefits.length - 1">
+      </tr>
+    </if>
+  </each>
+</table>

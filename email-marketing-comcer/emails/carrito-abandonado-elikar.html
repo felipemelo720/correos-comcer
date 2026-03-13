@@ -1,0 +1,171 @@
+---
+bodyClass: bg-gray-50
+preheader: Tu carrito te está esperando - Completa tu compra con Elikar
+---
+
+<x-main>
+  <div class="bg-gray-50 sm:px-4 font-inter">
+    <table align="center" class="m-0 mx-auto">
+      <tr>
+        <td class="w-[600px] max-w-full">
+          <x-spacer height="24px" />
+
+          <!-- Header -->
+          <x-header-logo />
+
+          <!-- Hero Section -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-blue-600 text-white text-center">
+                <h1 class="m-0 mb-4 text-3xl/10 sm:text-2xl font-bold text-white">
+                  ¡Hola {{customer.firstname}}!
+                </h1>
+                <p class="m-0 mb-6 text-lg/7 sm:text-base text-white">
+                  Su carrito en COMCER está esperando por usted
+                </p>
+                <p class="m-0 text-base/6 sm:text-sm text-blue-100">
+                  Los productos que seleccionó siguen guardados y listos para completar su pedido
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Main Content -->
+          <table class="w-full">
+            <tr>
+              <td class="py-8 px-9 sm:p-6 bg-white [border:1px_solid_theme(colors.gray.200)]">
+                
+                <!-- Mensaje principal -->
+                <div class="text-center mb-8">
+                  <h2 class="m-0 mb-4 text-xl/7 sm:text-lg font-bold text-gray-800">
+                    No pierda la oportunidad
+                  </h2>
+                  <p class="m-0 mb-6 text-base/6 sm:text-sm text-gray-700">
+                    Hemos notado que inició una compra en <strong class="text-blue-600">COMCER</strong> 
+                    pero no llegó a completarla. Su carrito sigue guardado con todos los productos 
+                    que seleccionó para su negocio.
+                  </p>
+                </div>
+
+                <!-- CTA Principal -->
+                <div class="text-center mb-8">
+                  <x-button
+                    href="{{cart.url}}"
+                    class="bg-green-600 hover:bg-green-700 text-lg px-8 py-4"
+                  >
+                    Completar mi Compra
+                  </x-button>
+                </div>
+
+                <x-divider />
+
+                <!-- Información de contacto personalizada -->
+                <div class="bg-blue-50 rounded-lg p-6 sm:p-4 mb-8">
+                  <h3 class="m-0 mb-4 text-lg/6 sm:text-base font-bold text-center text-blue-900">
+                    ¿Necesita ayuda con su pedido?
+                  </h3>
+                  <p class="m-0 mb-4 text-center text-sm sm:text-xs text-gray-700">
+                    Su ejecutiva comercial <strong class="text-blue-700">Elikar</strong> 
+                    está disponible para asistirle con cualquier consulta sobre su pedido.
+                  </p>
+                  <div class="text-center">
+                    <p class="m-0 mb-2 text-sm sm:text-xs text-gray-700">
+                      📞 <strong>Línea directa:</strong> 
+                      <a href="tel:+56226832575" class="text-blue-600 no-underline font-semibold">+56 2 2683 2575</a>
+                    </p>
+                    <p class="m-0 mb-2 text-sm sm:text-xs text-gray-700">
+                      💬 <strong>WhatsApp:</strong> 
+                      <a href="https://wa.me/56966767958?text=Hola%20Elikar,%20tengo%20una%20consulta%20sobre%20mi%20carrito%20de%20compras" 
+                         class="text-green-600 no-underline font-semibold">+56 9 6676 7958</a>
+                    </p>
+                    <p class="m-0 text-sm sm:text-xs text-gray-700">
+                      📧 <strong>Email:</strong> 
+                      <a href="mailto:pedidos@comcer.cl?subject=Consulta%20sobre%20carrito%20abandonado" 
+                         class="text-blue-600 no-underline font-semibold">pedidos@comcer.cl</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Beneficios de completar la compra -->
+                <div class="mb-8">
+                  <h3 class="m-0 mb-6 text-lg/6 sm:text-base font-bold text-center text-gray-800">
+                    Beneficios de completar su compra hoy
+                  </h3>
+                  
+                  <table class="w-full">
+                    <tr>
+                      <td class="p-3 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                        <div class="bg-green-50 rounded-lg p-4 sm:p-3 text-center" style="min-height: 100px;">
+                          <h4 class="m-0 mb-2 text-base sm:text-sm font-semibold text-green-900">🚚 Envío Rápido</h4>
+                          <p class="m-0 text-sm sm:text-xs text-gray-700">
+                            Despacho en 24-48 horas para Santiago
+                          </p>
+                        </div>
+                      </td>
+                      <td class="p-3 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                        <div class="bg-blue-50 rounded-lg p-4 sm:p-3 text-center" style="min-height: 100px;">
+                          <h4 class="m-0 mb-2 text-base sm:text-sm font-semibold text-blue-900">💰 Precios Mayoristas</h4>
+                          <p class="m-0 text-sm sm:text-xs text-gray-700">
+                            Mejores precios para su negocio
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                        <div class="bg-orange-50 rounded-lg p-4 sm:p-3 text-center" style="min-height: 100px;">
+                          <h4 class="m-0 mb-2 text-base sm:text-sm font-semibold text-orange-900">🎯 Asesoría Profesional</h4>
+                          <p class="m-0 text-sm sm:text-xs text-gray-700">
+                            Elikar le ayudará a optimizar su pedido
+                          </p>
+                        </div>
+                      </td>
+                      <td class="p-3 sm:p-2 sm:w-full sm:block w-1/2 align-top">
+                        <div class="bg-purple-50 rounded-lg p-4 sm:p-3 text-center" style="min-height: 100px;">
+                          <h4 class="m-0 mb-2 text-base sm:text-sm font-semibold text-purple-900">📦 Stock Garantizado</h4>
+                          <p class="m-0 text-sm sm:text-xs text-gray-700">
+                            Productos disponibles de inmediato
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- CTA Secundario -->
+                <div class="bg-gray-50 rounded-lg p-6 sm:p-4 text-center mb-8">
+                  <h3 class="m-0 mb-3 text-base sm:text-sm font-semibold text-gray-800">
+                    ¿Prefiere hablar directamente con Elikar?
+                  </h3>
+                  <p class="m-0 mb-4 text-sm sm:text-xs text-gray-600">
+                    Ella puede ayudarle a completar su pedido por teléfono
+                  </p>
+                  <x-button
+                    href="tel:+56226832575"
+                    class="bg-blue-600 hover:bg-blue-700"
+                  >
+                    Llamar Ahora
+                  </x-button>
+                </div>
+
+                <!-- Mensaje de urgencia sutil -->
+                <div class="text-center">
+                  <p class="m-0 text-sm sm:text-xs text-gray-600">
+                    Su carrito estará disponible por <strong>7 días más</strong>. 
+                    Complete su compra antes de que expire.
+                  </p>
+                </div>
+
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <x-footer-links showContact="true" showUnsubscribe="true" />
+
+          <x-spacer height="24px" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>

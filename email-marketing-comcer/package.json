@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "maizzle serve",
+    "build": "maizzle build production",
+    "cloudinary": "node cloudinary-upload.js"
+  },
+  "dependencies": {
+    "@maizzle/framework": "latest",
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.2.0",
+    "tailwindcss-preset-email": "latest"
+  }
+}

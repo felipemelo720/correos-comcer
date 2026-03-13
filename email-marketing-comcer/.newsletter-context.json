@@ -1,0 +1,21 @@
+{
+  "usedProducts": [34667],
+  "lastRun": "2026-03-10T12:00:00.000Z",
+  "history": [
+    {
+      "productId": 34667,
+      "date": "2026-03-10",
+      "template": "newsletter-servilleta-napkin-2026-03-10.html",
+      "productName": "SERVILLETA NAPKIN DOBLE HOJA INTERFOLIADO 6000 UNI",
+      "slug": "servilleta-napkin-doble-hoja-interfoliado-6000-uni"
+      "price": 28990,
+      "status": "completed"
+    }
+  ],
+  "settings": {
+    "frequency": "weekly",
+    "minDaysBetweenReuse": 30,
+    "maxProductsInRotation": 20,
+    "preferredCategories": []
+  }
+}

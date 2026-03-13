@@ -1,0 +1,113 @@
+<!-- Contenedor exterior para centrar todo el correo -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center"><!-- Contenedor principal que envuelve todo el contenido -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="background-color: #f7f7f7; padding: 40px 10px;" align="center"><!-- Frame interior que contiene el correo -->
+<table style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08);" border="0" width="600" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding: 35px 30px;" align="center" valign="top"><!-- Encabezado con logo -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding-bottom: 25px; border-bottom: 1px solid #e0e0e0;" align="center">
+<img style="display: block; margin: 0 auto;" 
+     src="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto/v1752948997/email-marketing/comcer/logo.png" 
+     alt="COMCER" width="200" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Contenido principal -->
+<table style="font-family: Arial, Helvetica, sans-serif; color: #444444; line-height: 1.7; height: 303px;" border="0" width="536" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding-top: 30px;">
+<h2 style="color: #02b9d2; margin-top: 0; font-size: 22px; margin-bottom: 15px;">Hola {{customer.firstname}},</h2>
+<p style="margin: 0 0 15px 0;">Soy Elikar Ortega, Ejecutiva Comercial. Me comunico contigo porque noté que dejaste algunos productos en tu carrito.</p>
+<p data-start="331" data-end="546">Entiendo que el día a día puede ser muy ajetreado y no quería que perdieras la oportunidad de completar tu pedido. Si necesitas apoyo para finalizar tu compra o tienes dudas sobre los productos seleccionados, estaré encantada de ayudarte personalmente.</p>
+<p data-start="548" data-end="630">Haz clic en el siguiente botón y continúa fácilmente con tu pedido:</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Botón -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding: 25px 0 30px 0;" align="center">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border-radius: 6px;" align="center" bgcolor="#99CA3C"><a style="border: 1px solid #99CA3C; border-radius: 6px; color: #ffffff; display: inline-block; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.2; padding: 14px 30px; text-decoration: none; white-space: nowrap;" href="{{cart.checkout_url}}">Completar mi compra</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Mensaje adicional -->
+<table style="font-family: Arial, Helvetica, sans-serif; color: #444444; line-height: 1.7;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<p data-start="632" data-end="747">Gracias por confiar en <strong>Comcer</strong>. Estoy aquí para ayudarte a encontrar siempre la mejor solución en productos de higiene y limpieza.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Separador gris claro -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="height: 1px; background-color: #e8e8e8; font-size: 0; line-height: 0;"></td>
+</tr>
+</tbody>
+</table>
+
+<!-- Pie de página -->
+<table style="font-family: Arial, Helvetica, sans-serif; color: #888888; line-height: 1.5; font-size: 13px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding-top: 25px;">
+<p style="margin: 0 0 0px 0;">Un saludo,</p>
+<p style="margin: 0 0 0px 0;">Elikar Ortega</p>
+<p style="margin: 0 0 0px 0;"><strong>Ejecutiva Comercial</strong></p>
+<p style="margin: 0 0 0px 0;"><a href="mailto:pedidos@comcer.cl">pedidos@comcer.cl</a></p>
+<p style="margin: 0 0 0px 0;"><a href="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto/v1752948997/email-marketing/comcer/wa.png"><img class="alignnone wp-image-32524" src="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto/v1752948997/email-marketing/comcer/wa.png" alt="" width="16" height="16" /></a> <a href="https://wa.me/+56966767958">+56 9 6676 7958</a></p>
+<p style="margin: 0 0 0px 0;"><strong> <img class="alignleft" style="display: block; margin: 0 auto;" src="https://res.cloudinary.com/dhaiefxda/image/upload/f_webp,q_auto/v1752948997/email-marketing/comcer/logo.png" alt="Comcer" width="19" height="14" /></strong><strong style="font-family: inherit; font-size: inherit;"><a href="https://comcer.cl">Conoce más de Comcer</a></strong></p>
+<p style="margin: 0;">{{cart.unsubscribe}}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Información de copyright -->
+<table style="max-width: 600px; margin-top: 20px;" border="0" width="600" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; color: #999999; font-size: 12px;" align="center">© 2025 COMCER. Todos los derechos reservados.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>

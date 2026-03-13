@@ -1,0 +1,35 @@
+<!--
+  Product Specs Component
+  
+  Props:
+  - title: Título de la sección (opcional)
+  - specs: Array de objetos con { label, value }
+  - bgColor: Color de fondo (default: "bg-gray-50")
+  - showBorder: Mostrar borde (default: false)
+  
+  Ejemplo de uso:
+  <x-product-specs 
+    title="Especificaciones Técnicas"
+    :specs="[
+      { label: 'Tipo', value: 'Servilleta Mesa' },
+      { label: 'Color', value: 'Blanco' }
+    ]"
+  />
+-->
+
+<div class="{{ props.bgColor || 'bg-gray-50' }} rounded-lg p-6 {{ props.showBorder ? 'border border-gray-200' : '' }}">
+  <if condition="props.title">
+    <h4 class="m-0 mb-4 text-lg/6 font-semibold text-gray-800">{{ props.title }}</h4>
+  </if>
+  <table class="w-full">
+    <each loop="spec in props.specs">
+      <tr>
+        <td class="pb-2">
+          <p class="m-0 text-sm text-gray-600">
+            <strong>{{ spec.label }}:</strong> {{ spec.value }}
+          </p>
+        </td>
+      </tr>
+    </each>
+  </table>
+</div>

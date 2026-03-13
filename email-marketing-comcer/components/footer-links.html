@@ -1,0 +1,54 @@
+<!--
+  Footer Links Component
+  
+  Props:
+  - showContact: Mostrar información de contacto (default: true)
+  - links: Array de objetos con { text, url } (opcional, usa links por defecto)
+  - showUnsubscribe: Mostrar link de cancelación (default: true)
+  - bgColor: Color de fondo (default: "bg-white")
+  - borderColor: Color del borde (default: "border-gray-200")
+  - rounded: Aplicar bordes redondeados (default: "rounded-b-lg")
+-->
+
+<table class="w-full">
+  <tr>
+    <td class="py-6 px-9 sm:px-6 {{ props.bgColor || 'bg-white' }} [border:1px_solid_theme(colors.gray.200)] {{ props.rounded || 'rounded-b-lg' }}">
+      <!-- Contact Info -->
+      <if condition="props.showContact !== false">
+        <x-contact-info 
+          :email="props.email"
+          :phone="props.phone"
+          :whatsapp="props.whatsapp"
+          :address="props.address"
+        />
+        <x-divider />
+      </if>
+      
+      <!-- Links -->
+      <p class="m-0 mb-4 text-center text-sm text-gray-600">
+        <if condition="props.links">
+          <each loop="link, index in props.links">
+            <a href="{{ link.url }}" class="text-blue-600 no-underline">{{ link.text }}</a>
+            <if condition="index < props.links.length - 1"> | </if>
+          </each>
+        <else />
+          <a href="https://comcer.cl" class="text-blue-600 no-underline">Sitio Web</a> |
+          <a href="https://comcer.cl/productos" class="text-blue-600 no-underline">Catálogo</a> |
+          <a href="https://comcer.cl/contacto" class="text-blue-600 no-underline">Contacto</a>
+        </if>
+      </p>
+      
+      <p class="m-0 text-center text-xs text-gray-500">
+        &copy; {{ new Date().getFullYear() }} Comcer. Todos los derechos reservados.
+      </p>
+      
+      <if condition="props.showUnsubscribe !== false">
+        <p class="m-0 mt-4 text-center">
+          <a href="{{ props.unsubscribeUrl || 'https://comcer.cl/unsubscribe' }}" class="text-xs text-gray-500 underline">
+            Cancelar suscripción
+          </a>
+        </p>
+      </if>
+    </td>
+  </tr>
+</table>
